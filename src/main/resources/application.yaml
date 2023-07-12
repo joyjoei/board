@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@210.101.176.80:1528:dbtbs
+    username: cpsuser
+    password: wpcjf!@#$1234
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    show-sql: true
+    properties:
+      format_sql: true
+      dialect: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: validate
