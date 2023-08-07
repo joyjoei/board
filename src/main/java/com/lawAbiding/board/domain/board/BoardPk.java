@@ -1,4 +1,4 @@
-package com.lawAbiding.board.domain;
+package com.lawAbiding.board.domain.board;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,6 +11,5 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class BoardPk implements Serializable {
 
-    private String gubun;
     private int seqno;
 }

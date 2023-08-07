@@ -1,7 +1,6 @@
 package com.lawAbiding.board.model;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.*;
 
@@ -15,16 +14,10 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonNaming(value = PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class BoardRequest {
+public class ComplianceRequest {
 
     private int seqNo;
 
-    @NotBlank
-    private String gubun;
-    @NotBlank
-    private String gubun_name;
-    @NotBlank
-    private String title;
     @NotBlank
     private String contents;
 

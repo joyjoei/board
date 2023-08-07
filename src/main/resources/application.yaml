@@ -1,9 +1,18 @@
 spring:
+  mvc:
+    dispatch-options-request: true
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+  server:
+    tomcat:
+      additional-tld-skip-patterns: "*.war"
   datasource:
-    url: jdbc:oracle:thin:@210.101.176.80:1528:dbtbs
-    username: cpsuser
-    password: wpcjf!@#$1234
+    url: jdbc:oracle:thin:@ip:db
+    username:
+    password:
     driver-class-name: oracle.jdbc.driver.OracleDriver
+
   jpa:
     show-sql: true
     properties:
@@ -11,3 +20,18 @@ spring:
       dialect: org.hibernate.dialect.Oracle10gDialect
     hibernate:
       ddl-auto: validate
+  spring:
+    devtools:
+      livereload:
+        enabled: true
+  logging:
+    level:
+      org:
+        hibernate:
+          type:
+            descriptor:
+              sql: trace
+  servlet:
+    multipart:
+      maxFileSize: 20MB
+      maxRequestSize: 20MB
